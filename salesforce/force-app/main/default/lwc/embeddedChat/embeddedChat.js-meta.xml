@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Embedded Relay Chat</masterLabel>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__AppPage,lightning__HomePage,lightning__RecordPage">
+            <property name="chatOrigin" type="String" label="Chat origin (HTTPS, no path)" default="https://chat.example.com"/>
+            <property name="room" type="String" label="Room (record pages use record ID)" default="general"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

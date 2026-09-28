@@ -1,0 +1,4 @@
+# Replace this domain; DNS must point to your EC2 public IP.
+chat.example.com {
+    reverse_proxy 127.0.0.1:3001
+}

@@ -1,0 +1,11 @@
+{
+  "name": "iframe-chat", "version": "1.0.0", "private": true, "type": "module",
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "dev": "concurrently -k -n server,client \"node --env-file-if-exists=.env --watch server/index.js\" \"vite --host 0.0.0.0\"",
+    "build": "vite build", "start": "node --env-file-if-exists=.env server/index.js",
+    "test": "node --test server/*.test.js"
+  },
+  "dependencies": { "express": "^5.1.0", "react": "^19.1.0", "react-dom": "^19.1.0", "ws": "^8.18.0" },
+  "devDependencies": { "vite": "^7.0.0", "concurrently": "^9.2.0" }
+}
